@@ -104,7 +104,7 @@
                     if(isset($_POST['edit_category'])){
                         $result = $connection -> query("UPDATE categories SET name = '$_POST[name]' WHERE cid = $cid;");
                         if($result){
-                            echo '<div id="edit-category-done" style="display: none;"><br><p class="text-center text-success">Category edited successfully.</p></div>';
+                            echo '<div id="edit-category-done" style="display: none;"><br><p class="alert alert-success" role="alert">Category edited successfully.</p></div>';
                             echo '<script>
                                 setTimeout(function () {
                                     var msg = document.getElementById("edit-category-done");
@@ -116,7 +116,7 @@
                             </script>';
                         }
                         else{
-                            echo '<div id="edit-category-not-done" style="display: none;"><br><p class="text-center text-danger">Failed to edit category.</p></div>';
+                            echo '<div id="edit-category-not-done" style="display: none;"><br><p class="alert alert-danger" role="alert">Failed to edit category.</p></div>';
                             echo '<script>
                                 setTimeout(function () {
                                     var msg = document.getElementById("edit-category-not-done");

@@ -139,7 +139,7 @@
                         $result = $connection -> query("INSERT INTO issued_books VALUES(NULL, 1, '$_POST[issue_date]', '$_POST[due_date]', NULL, NULL, NULL, $_POST[user], $_POST[book], $author);");
                         mysqli_query($connection, "UPDATE books SET status = $status WHERE bid = $_POST[book];");
                         if($result){
-                            echo '<div id="issue-book-done" style="display: none;"><br><p class="text-center text-success">Book issued successfully.</p></div>';
+                            echo '<div id="issue-book-done" style="display: none;"><br><p class="alert alert-success" role="alert">Book issued successfully.</p></div>';
                             echo '<script>
                                 setTimeout(function () {
                                     var msg = document.getElementById("issue-book-done");
@@ -151,7 +151,7 @@
                             </script>';
                         }
                         else{
-                            echo '<div id="issue-book-not-done" style="display: none;"><br><p class="text-center text-danger">Failed to issue book.</p></div>';
+                            echo '<div id="issue-book-not-done" style="display: none;"><br><p class="alert alert-danger" role="alert">Failed to issue book.</p></div>';
                             echo '<script>
                                 setTimeout(function () {
                                     var msg = document.getElementById("issue-book-not-done");

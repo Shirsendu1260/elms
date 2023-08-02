@@ -88,7 +88,7 @@
                     if(isset($_POST['add_author'])){
                         $result = $connection -> query("INSERT INTO authors VALUES(NULL, '$_POST[name]');");
                         if($result){
-                            echo '<div id="add-author-done" style="display: none;"><br><p class="text-center text-success">Author added successfully.</p></div>';
+                            echo '<div id="add-author-done" style="display: none;"><br><p class="alert alert-success" role="alert">Author added successfully.</p></div>';
                             echo '<script>
                                 setTimeout(function () {
                                     var msg = document.getElementById("add-author-done");
@@ -100,7 +100,7 @@
                             </script>';
                         }
                         else{
-                            echo '<div id="add-author-not-done" style="display: none;"><br><p class="text-center text-danger">Failed to add author.</p></div>';
+                            echo '<div id="add-author-not-done" style="display: none;"><br><p class="alert alert-danger" role="alert">Failed to add author.</p></div>';
                             echo '<script>
                                 setTimeout(function () {
                                     var msg = document.getElementById("add-author-not-done");

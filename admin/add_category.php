@@ -88,7 +88,7 @@
                     if(isset($_POST['add_category'])){
                         $result = $connection -> query("INSERT INTO categories VALUES(NULL, '$_POST[name]');");
                         if($result){
-                            echo '<div id="add-category-done" style="display: none;"><br><p class="text-center text-success">Category added successfully.</p></div>';
+                            echo '<div id="add-category-done" style="display: none;"><br><p class="alert alert-success" role="alert">Category added successfully.</p></div>';
                             echo '<script>
                                 setTimeout(function () {
                                     var msg = document.getElementById("add-category-done");
@@ -100,7 +100,7 @@
                             </script>';
                         }
                         else{
-                            echo '<div id="add-category-not-done" style="display: none;"><br><p class="text-center text-danger">Failed to add category.</p></div>';
+                            echo '<div id="add-category-not-done" style="display: none;"><br><p class="alert alert-danger" role="alert">Failed to add category.</p></div>';
                             echo '<script>
                                 setTimeout(function () {
                                     var msg = document.getElementById("add-category-not-done");

@@ -63,7 +63,7 @@
                                         header("Location: ../admin/admin_dashboard.php");
                                     }
                                     else{
-                                        echo '<div id="admin-wrong-pw" style="display: none;"><br><p class="text-center text-danger">Incorrect Password!</p></div>';
+                                        echo '<div id="admin-wrong-pw" style="display: none;"><br><p class="alert alert-danger" role="alert">Incorrect Password!</p></div>';
                                         echo '<script>
                                             setTimeout(function () {
                                                 var msg = document.getElementById("admin-wrong-pw");

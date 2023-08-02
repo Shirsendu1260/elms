@@ -104,7 +104,7 @@
                     if(isset($_POST['edit_author'])){
                         $result = $connection -> query("UPDATE authors SET name = '$_POST[name]' WHERE aid = $aid;");
                         if($result){
-                            echo '<div id="edit-author-done" style="display: none;"><br><p class="text-center text-success">Author edited successfully.</p></div>';
+                            echo '<div id="edit-author-done" style="display: none;"><br><p class="alert alert-success" role="alert">Author edited successfully.</p></div>';
                             echo '<script>
                                 setTimeout(function () {
                                     var msg = document.getElementById("edit-author-done");
@@ -116,7 +116,7 @@
                             </script>';
                         }
                         else{
-                            echo '<div id="edit-author-not-done" style="display: none;"><br><p class="text-center text-danger">Failed to edit author.</p></div>';
+                            echo '<div id="edit-author-not-done" style="display: none;"><br><p class="alert alert-danger" role="alert">Failed to edit author.</p></div>';
                             echo '<script>
                                 setTimeout(function () {
                                     var msg = document.getElementById("edit-author-not-done");

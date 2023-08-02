@@ -130,7 +130,7 @@
                         $status = 1;
                         $result = $connection -> query("INSERT INTO books VALUES(NULL, '$_POST[name]', '$_POST[isbn]', $status, $_POST[locker_no], $_POST[price], $_POST[author], $_POST[category]);");
                         if($result){
-                            echo '<div id="add-book-done" style="display: none;"><br><p class="text-center text-success">Book added successfully.</p></div>';
+                            echo '<div id="add-book-done" style="display: none;"><br><p class="alert alert-success" role="alert">Book added successfully.</p></div>';
                             echo '<script>
                                 setTimeout(function () {
                                     var msg = document.getElementById("add-book-done");
@@ -142,7 +142,7 @@
                             </script>';
                         }
                         else{
-                            echo '<div id="add-book-not-done" style="display: none;"><br><p class="text-center text-danger">Failed to add book.</p></div>';
+                            echo '<div id="add-book-not-done" style="display: none;"><br><p class="alert alert-danger" role="alert">Failed to add book.</p></div>';
                             echo '<script>
                                 setTimeout(function () {
                                     var msg = document.getElementById("add-book-not-done");

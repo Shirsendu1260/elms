@@ -42,7 +42,8 @@
                     </div>
                     <div class="form-group mb-2">
                         <div class="d-flex align-items-center">
-                            <input type="password" name="password" id="password" placeholder="Password" class="form-control required border-2">
+                            <input type="password" name="password" id="password" placeholder="Password"
+                                class="form-control required border-2">
                             <img class="ms-2" id="hide-pw" style="width: 20px;" src="..\assets\hidden.svg"
                                 alt="hide-password">
                         </div>
@@ -65,7 +66,7 @@
                                         header("Location: ../user/user_dashboard.php");
                                     }
                                     else{
-                                        echo '<div id="wrong-pw" style="display: none;"><br><p class="text-center text-danger">Incorrect Password!</p></div>';
+                                        echo '<div id="wrong-pw" style="display: none;"><br><p class="alert alert-danger" role="alert">Incorrect Password!</p></div>';
                                         echo '<script>
                                             setTimeout(function () {
                                                 var msg = document.getElementById("wrong-pw");
@@ -80,9 +81,12 @@
                             }
                         }
                     ?>
+                    <div class="mb-2">Forgot password? <a href="../user/forgot_password.php"
+                            style="text-decoration: none;">Click
+                            here</a></div>
                     <button type="submit" name="login" class="btn btn-outline-primary my-2">Login</button>
                 </form>
-                <div>
+                <div class="d-flex justify-content-center">
                     <p>Don't have an account? <a href="../user/user_signup.php" style="text-decoration: none;">Sign
                             up</a>
                     </p>

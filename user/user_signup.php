@@ -45,7 +45,8 @@
                     </div>
                     <div class="form-group mb-2">
                         <div class="d-flex align-items-center">
-                            <input type="password" name="password" id="password" placeholder="Password" class="form-control required border-2">
+                            <input type="password" name="password" id="password" placeholder="Password"
+                                class="form-control required border-2">
                             <img class="ms-2" id="hide-pw" style="width: 20px;" src="..\assets\hidden.svg"
                                 alt="hide-password">
                         </div>
@@ -59,7 +60,8 @@
                         </select>
                     </div>
                     <div class="form-group mb-2">
-                        <input type="number" name="mobile" placeholder="Mobile No." class="form-control required border-2">
+                        <input type="number" name="mobile" placeholder="Mobile No."
+                            class="form-control required border-2">
                     </div>
                     <div class="form-group mb-2">
                         <textarea name="address" rows="4" placeholder="Address" class="form-control required border-2"
@@ -67,7 +69,7 @@
                     </div>
                     <button type="submit" class="btn btn-outline-primary my-2">Sign-up</button>
                 </form>
-                <div>
+                <div class="d-flex justify-content-center">
                     <p>Already have an account? <a href="../user/user_login.php" style="text-decoration: none;">Log
                             in</a>
                     </p>

@@ -175,7 +175,7 @@
                         $status = 1;
                         $result = $connection -> query("UPDATE books SET name = '$_POST[name]', isbn = '$_POST[isbn]', status = $status, locker_no = $_POST[locker_no], price = $_POST[price], author_id = $_POST[author], category_id = $_POST[category] WHERE bid = $bid;");
                         if($result){
-                            echo '<div id="edit-book-done" style="display: none;"><br><p class="text-center text-success">Book edited successfully.</p></div>';
+                            echo '<div id="edit-book-done" style="display: none;"><br><p class="alert alert-success" role="alert">Book edited successfully.</p></div>';
                             echo '<script>
                                 setTimeout(function () {
                                     var msg = document.getElementById("edit-book-done");
@@ -187,7 +187,7 @@
                             </script>';
                         }
                         else{
-                            echo '<div id="edit-book-not-done" style="display: none;"><br><p class="text-center text-danger">Failed to edit book.</p></div>';
+                            echo '<div id="edit-book-not-done" style="display: none;"><br><p class="alert alert-danger" role="alert">Failed to edit book.</p></div>';
                             echo '<script>
                                 setTimeout(function () {
                                     var msg = document.getElementById("edit-book-not-done");
