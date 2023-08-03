@@ -19,6 +19,10 @@
         $address = $library_data["address"];
         $phone = $library_data["phone"];
         $email = $library_data["email"];
+        $time_start = $library_data["time_start"];
+        $time_end = $library_data["time_end"];
+        $week_start = $library_data["week_start"];
+        $week_end = $library_data["week_end"];
     ?>
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand fw-bold" href="../admin/admin_dashboard.php"><span class="text-primary">e</span>LMS</a>
@@ -97,6 +101,23 @@
                     <div class="form-group mb-2">
                         <label for="email">Email</label>
                         <input type="email" name="email" class="form-control" value="<?php echo $email; ?>" readonly>
+                    </div>
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne">Library Hours</button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                <div class="accordion-body">Our library is operational from
+                                    <?php echo $week_start; ?> to
+                                    <?php echo $week_end; ?>, from
+                                    <?php echo $time_start; ?> to
+                                    <?php echo $time_end; ?>.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </form>
                 <a href="../admin/edit_library_info.php"><button class="btn btn-outline-primary">Edit</button></a>

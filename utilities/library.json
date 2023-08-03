@@ -2,5 +2,9 @@
     "name": "ABC Library",
     "address": "Esplanade, Kolkata, India",
     "phone": "033-55551110, 033-55501122",
-    "email": "abclibrary2021@gmail.com"
+    "email": "abclibrary2021@gmail.com",
+    "time_start": "09:00",
+    "time_end": "19:30",
+    "week_start": "Monday",
+    "week_end": "Saturday"
 }

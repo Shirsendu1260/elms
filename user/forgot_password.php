@@ -73,7 +73,7 @@
                             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
                             $mail->Port       = 465;
 
-                            $mail->setFrom('smali010917@gmail.com', 'eLMS Admin');
+                            $mail->setFrom($admin_gmail_id, 'eLMS Admin');
                             $mail->addAddress($email);
 
                             $mail->isHTML(true);

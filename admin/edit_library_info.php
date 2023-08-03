@@ -19,6 +19,10 @@
         $address = $library_data["address"];
         $phone = $library_data["phone"];
         $email = $library_data["email"];
+        $time_start = $library_data["time_start"];
+        $time_end = $library_data["time_end"];
+        $week_start = $library_data["week_start"];
+        $week_end = $library_data["week_end"];
     ?>
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand fw-bold" href="../admin/admin_dashboard.php"><span class="text-primary">e</span>LMS</a>
@@ -97,6 +101,22 @@
                     <div class="form-group mb-2">
                         <label for="email">Email</label>
                         <input type="email" name="email" class="form-control" value="<?php echo $email; ?>">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="time_start">Library Opening Time</label>
+                        <input type="text" name="time_start" class="form-control" value="<?php echo $time_start; ?>">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="time_end">Library Closing Time</label>
+                        <input type="text" name="time_end" class="form-control" value="<?php echo $time_end; ?>">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="week_start">From</label>
+                        <input type="text" name="week_start" class="form-control" value="<?php echo $week_start; ?>">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="week_end">To</label>
+                        <input type="text" name="week_end" class="form-control" value="<?php echo $week_end; ?>">
                     </div>
                     <button type="submit" name="save" class="btn btn-outline-primary my-2">Save</button>
                 </form>
