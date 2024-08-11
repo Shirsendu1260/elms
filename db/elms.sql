@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 25, 2022 at 06:07 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Generation Time: Aug 11, 2024 at 09:29 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -222,9 +222,10 @@ INSERT INTO `users` (`uid`, `name`, `email`, `password`, `reset_token`, `reset_t
 (1, 'A. Manna', 'am5@gmail.com', '11111111', NULL, NULL, 'male', 9009911221, 'Garia, Kolkata, India', '2021-06-05 09:13:05'),
 (2, 'D. Das', 'dd2@gmail.com', '22222222', NULL, NULL, 'male', 9999988885, 'Garia, Kolkata, India', '2021-06-05 11:23:05'),
 (4, 'S. Roy', 'tempcode1260@gmail.com', '11112222', NULL, NULL, 'male', 8888021133, 'Dum Dum, N24 Parganas, India', '2021-06-06 13:17:43'),
-(5, 'R. Naskar', 'rn8@gmail.com', '44444444', NULL, NULL, 'female', 9999999912, 'Sonarpur, S24 Parganas, India', '2021-06-08 12:07:44'),
+(5, 'R. Mali', 'rn8@gmail.com', '44444444', NULL, NULL, 'female', 9999999912, 'Sonarpur, S24 Parganas, India', '2021-06-08 12:07:44'),
 (6, 'M. Paul', 'mp4@gmail.com', '55555555', NULL, NULL, 'female', 8888111122, 'Naihati, Nadia, India', '2021-06-11 16:15:41'),
-(7, 'P. Majumder', 'pm9@gmail.com', '99999999', NULL, NULL, 'female', 9999911228, 'Salt Lake, Kolkata, India', '2023-07-25 16:48:15');
+(7, 'P. Majumder', 'pm9@gmail.com', '99999999', NULL, NULL, 'female', 9999911228, 'Salt Lake, Kolkata, India', '2023-07-25 16:48:15'),
+(8, 'S. Sarma', 'ss@gmail.com', '24242424', NULL, NULL, 'female', 8888899999, 'Ichapur, WB, India', '2024-08-11 08:36:48');
 
 --
 -- Indexes for dumped tables
@@ -323,7 +324,7 @@ ALTER TABLE `ratings`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `uid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `uid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
