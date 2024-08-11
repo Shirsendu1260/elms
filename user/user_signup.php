@@ -32,8 +32,9 @@
             </ul>
         </div>
     </nav>
-    <div class="form-container">
-        <div class="card col-md-6">
+    <div class="form-container p-5" style="height: auto;">
+        <div class="card" style="width: 17rem;">
+            <img src="../assets/user-signup.jpeg" class="card-img-top">
             <div class="card-body">
                 <h4 class="card-title my-2 text-center fw-bold">Sign-up</h4>
                 <form action="../user/signup.php" method="post" class="my-3">

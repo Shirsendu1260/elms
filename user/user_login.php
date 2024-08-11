@@ -33,7 +33,8 @@
         </div>
     </nav>
     <div class="form-container">
-        <div class="card col-md-6">
+        <div class="card" style="width: 17rem;">
+            <img src="../assets/user-login.jpeg" class="card-img-top">
             <div class="card-body">
                 <h4 class="card-title my-2 text-center fw-bold">Login</h4>
                 <form action="" method="post" class="my-3">
@@ -49,25 +50,24 @@
                         </div>
                     </div>
                     <?php
-                        session_start();
-                        if(isset($_POST['login'])){
-                            $connection = mysqli_connect("localhost", "root", "");
-                            $db = mysqli_select_db($connection, "elms");
-                            $sql = "SELECT * FROM users WHERE email = '$_POST[email]'";
-                            $run_query = mysqli_query($connection, $sql);
-                            while($row = mysqli_fetch_assoc($run_query)){
-                                if($row['email'] == $_POST['email']){
-                                    if($row['password'] == $_POST['password']){
-                                        $_SESSION['uid'] = $row['uid'];
-                                        $_SESSION['name'] = $row['name'];
-                                        $_SESSION['email'] = $row['email'];
-                                        $_SESSION['mobile'] = $row['mobile'];
-                                        $_SESSION['address'] = $row['address'];
-                                        header("Location: ../user/user_dashboard.php");
-                                    }
-                                    else{
-                                        echo '<div id="wrong-pw" style="display: none;"><br><p class="alert alert-danger" role="alert">Incorrect Password!</p></div>';
-                                        echo '<script>
+                    session_start();
+                    if (isset($_POST['login'])) {
+                        $connection = mysqli_connect("localhost", "root", "");
+                        $db = mysqli_select_db($connection, "elms");
+                        $sql = "SELECT * FROM users WHERE email = '$_POST[email]'";
+                        $run_query = mysqli_query($connection, $sql);
+                        while ($row = mysqli_fetch_assoc($run_query)) {
+                            if ($row['email'] == $_POST['email']) {
+                                if ($row['password'] == $_POST['password']) {
+                                    $_SESSION['uid'] = $row['uid'];
+                                    $_SESSION['name'] = $row['name'];
+                                    $_SESSION['email'] = $row['email'];
+                                    $_SESSION['mobile'] = $row['mobile'];
+                                    $_SESSION['address'] = $row['address'];
+                                    header("Location: ../user/user_dashboard.php");
+                                } else {
+                                    echo '<div id="wrong-pw" style="display: none;"><br><p class="alert alert-danger" role="alert">Incorrect Password!</p></div>';
+                                    echo '<script>
                                             setTimeout(function () {
                                                 var msg = document.getElementById("wrong-pw");
                                                 msg.style.display = "block";
@@ -76,10 +76,10 @@
                                                 }, 10000);
                                             }, 0);
                                         </script>';
-                                    }
                                 }
                             }
                         }
+                    }
                     ?>
                     <div class="mb-2">Forgot password? <a href="../user/forgot_password.php"
                             style="text-decoration: none;">Click

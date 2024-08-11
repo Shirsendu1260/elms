@@ -33,7 +33,8 @@
         </div>
     </nav>
     <div class="form-container">
-        <div class="card col-md-6">
+        <div class="card" style="width: 17rem;">
+            <img src="../assets/admin-login.jpeg" class="card-img-top">
             <div class="card-body">
                 <h4 class="card-title my-2 text-center fw-bold">Admin Login</h4>
                 <form action="" method="post" class="my-3">
@@ -42,29 +43,29 @@
                     </div>
                     <div class="form-group mb-2">
                         <div class="d-flex align-items-center">
-                            <input type="password" name="password" id="password" placeholder="Password" class="form-control required border-2">
+                            <input type="password" name="password" id="password" placeholder="Password"
+                                class="form-control required border-2">
                             <img class="ms-2" id="hide-pw" style="width: 20px;" src="..\assets\hidden.svg"
                                 alt="hide-password">
                         </div>
                     </div>
                     <?php
-                        session_start();
-                        if(isset($_POST['admin-login'])){
-                            $connection = mysqli_connect("localhost", "root", "");
-                            $db = mysqli_select_db($connection, "elms");
-                            $sql = "SELECT * FROM admins WHERE email = '$_POST[email]'";
-                            $run_query = mysqli_query($connection, $sql);
-                            while($row = mysqli_fetch_assoc($run_query)){
-                                if($row['email'] == $_POST['email']){
-                                    if($row['password'] == $_POST['password']){
-                                        $_SESSION['uid'] = $row['uid'];
-                                        $_SESSION['name'] = $row['name'];
-                                        $_SESSION['email'] = $row['email'];
-                                        header("Location: ../admin/admin_dashboard.php");
-                                    }
-                                    else{
-                                        echo '<div id="admin-wrong-pw" style="display: none;"><br><p class="alert alert-danger" role="alert">Incorrect Password!</p></div>';
-                                        echo '<script>
+                    session_start();
+                    if (isset($_POST['admin-login'])) {
+                        $connection = mysqli_connect("localhost", "root", "");
+                        $db = mysqli_select_db($connection, "elms");
+                        $sql = "SELECT * FROM admins WHERE email = '$_POST[email]'";
+                        $run_query = mysqli_query($connection, $sql);
+                        while ($row = mysqli_fetch_assoc($run_query)) {
+                            if ($row['email'] == $_POST['email']) {
+                                if ($row['password'] == $_POST['password']) {
+                                    $_SESSION['uid'] = $row['uid'];
+                                    $_SESSION['name'] = $row['name'];
+                                    $_SESSION['email'] = $row['email'];
+                                    header("Location: ../admin/admin_dashboard.php");
+                                } else {
+                                    echo '<div id="admin-wrong-pw" style="display: none;"><br><p class="alert alert-danger" role="alert">Incorrect Password!</p></div>';
+                                    echo '<script>
                                             setTimeout(function () {
                                                 var msg = document.getElementById("admin-wrong-pw");
                                                 msg.style.display = "block";
@@ -73,10 +74,10 @@
                                                 }, 10000);
                                             }, 0);
                                         </script>';
-                                    }
                                 }
                             }
                         }
+                    }
                     ?>
                     <button type="submit" name="admin-login" class="btn btn-outline-primary my-2">Login</button>
                 </form>
